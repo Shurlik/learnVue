@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/vue.js"></script>
+    <title>DMy Vue App</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sample">
+            <button class="btn btn-primary">
+                Toggle header
+            </button>
+            <hr>
+            <h2 v-show="showH2">Hello world</h2>
+            <!-- // директива записывается как атрибут к узлу и начинается как правило с префикса V 
+        v-show="сюда записывается булевское значение либо операция, которая это значение вернет"
+        либо какой нибудь метод, ссылка на который находится внутри экземпляра vue  
+        Фрагмент между " " можно восринимать как одну операцию на JS которую можно сделать
+        ---
+        v-show="showH2" - Выполнится в контексте нашего экземпляра Vue-->
+        </div>
+    </div>
+    <script>
+        let semple=new Vue({ //Здесь создаем экземпляр класа Vueб в который в качестве параметра передается объект с ключами
+            el: ".sample", // данный ключ определяет какой элемент (по селектору) и его содержимое будет контролироваться с помощью данного эеземпляра Vue
+            data: { // данный объект описывает данные которые лежат в экземпляре Vue и которые используються внутри элементаб т.е. котоые мы можем там выводить
+                showH2: true
+            }
+        })
+    </script>
+
+</body>
+
+</html>
